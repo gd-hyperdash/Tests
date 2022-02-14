@@ -11,7 +11,7 @@
 // Base function
 
 template <typename T>
-T printTypeName()
+void printTypeName()
 {
 	printf("Type is: %s\n", typeid(T).name());
 }
@@ -20,7 +20,7 @@ T printTypeName()
 
 template <typename R>
 [[decorator(::printTypeName<R>)]]
-R deco()
+void deco()
 {
 	printf("Hello from decorator!\n");
 }
